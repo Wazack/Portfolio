@@ -1,0 +1,112 @@
+.navbar {
+    padding: 10px;
+    img {
+        width: 50px;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Jost', sans-serif;
+    font-size: 32px;
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        a {
+            text-decoration: none;
+        }
+    }
+    .burger {
+        height: 40px;
+        background: transparent;
+        border: none;
+        color: inherit;
+        display: none;
+    }
+    
+    @media screen and (max-width: 767px) {
+        .burger {
+            display: block;
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            &:hover {
+                cursor: pointer;
+            }
+            .burger-bar, .burger-bar::before, .burger-bar::after {
+                display: block;
+                width: 40px;
+                height: 4px;
+                position: relative;
+                border-radius: 3px;
+                background: black;
+                transition: all .3s ease-in-out;
+            }
+            .burger-bar::before, .burger-bar::after {
+                content: "";
+                position: absolute;
+                left: 0;
+            }
+            .burger-bar::before {
+                transform: translateY(-12px);
+            }
+            
+            .burger-bar::after {
+                transform: translateY(12px);
+            }
+        }
+        ul {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            right: -100vw;
+            bottom: 0;
+            width: 0;
+            height: 100vh;
+            visibility: hidden;
+            background: black;
+            transition: all .5s ease-out;
+            li {
+                display: block;
+                font-size: 5vw;
+                &::after {
+                    content: "";
+                    display: block;
+                    margin: 1.5rem auto;
+                    width: 3vw;
+                    height: 1px;
+                    background: #FFFF;
+                }
+                &:last-child::after {
+                    display: none;
+                }
+            }
+            a {
+                color: #FFFF;
+            }
+        }
+        &.show-nav {
+            .burger {
+                .burger-bar, .burger-bar::before, .burger-bar::after {
+                    background: #FFFF;
+                }
+                .burger-bar::before {
+                    transform: rotate(45deg);
+                }
+                .burger-bar::after {
+                    transform: rotate(-45deg);
+                }
+                .burger-bar {
+                    background: transparent;
+                }
+            }
+            ul {
+                visibility: visible;
+                right: 0;
+                width: 100vw;
+            }
+        }
+    }
+}
