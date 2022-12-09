@@ -1,6 +1,10 @@
 .welcome {
-    height: 100vh;
+    min-height: 100vh;
     section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
         .presentation {
             margin-left: 3vw;
             h1 {
@@ -8,10 +12,10 @@
                 display: flex;
                 flex-direction: column;
                 font-weight: 400;
-                font-size: 26px;
+                font-size: 7vw;
                 span {
                     font-weight: 700;
-                    font-size: 40px;
+                    font-size: 11vw;
                     text-transform: uppercase;
                 }
             }
@@ -25,9 +29,49 @@
             }
             p {
                 font-weight: 400;
-                font-size: 24px;
+                font-size: 6vw;
                 color: rgba(134, 134, 134, 0.68);
             }
+        }
+        .face {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 395px;
+            img {
+                width: 46vw;
+                max-width: 195.5px;
+                position: absolute;
+                z-index: 1;
+            }
+            svg {
+                position: absolute;
+                width: 86vw;
+                max-width: 365.5px;
+            }
+        }
+    }
+    @media screen and (min-width: 425px) {
+        section {
+            .presentation {
+                margin-left: 6vw;
+                h1 {
+                    font-size: 30px;
+                    span {
+                        font-size: 47px;
+                    }
+                }
+                p {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        section {
+            flex-direction: row;
         }
     }
 }
