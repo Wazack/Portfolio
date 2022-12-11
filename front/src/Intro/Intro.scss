@@ -21,11 +21,8 @@
             }
             .divider {
                 width: 117px;
-                height: 0px;
-                left: 18px;
-                top: 312px;
-
-                border: 1px solid rgba(0, 0, 0, 0.55);
+                height: 1px;
+                background: #000;
             }
             p {
                 font-weight: 400;
@@ -71,7 +68,79 @@
     }
     @media screen and (min-width: 768px) {
         section {
+            gap: unset;
+            align-items: center;
+            justify-content: space-around;
             flex-direction: row;
+            .presentation {
+                margin: unset;
+                h1 {
+                    font-size: 25px;
+                    span {
+                        font-size: 42px;
+                    }
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+            .face {
+                width: 302px;
+                img {
+                    max-width: 164px;
+                }
+                svg {
+                    max-width: 302px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        section {
+            .presentation {
+                h1 {
+                    font-size: 30px;
+                    span {
+                        font-size: 54px;
+                    }
+                }
+                p {
+                    font-size: 22px;
+                }
+            }
+            .face {
+                width: 413px;
+                img {
+                    max-width: 222px;
+                }
+                svg {
+                    max-width: 413px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        section {
+            .presentation {
+                h1 {
+                    font-size: 36px;
+                    span {
+                        font-size: 64px;
+                    }
+                }
+                p {
+                    font-size: 24px;
+                }
+            }
+            .face {
+                width: 464.58px;
+                img {
+                    max-width: 240px;
+                }
+                svg {
+                    max-width: 464.58px;
+                }
+            }
         }
     }
 }

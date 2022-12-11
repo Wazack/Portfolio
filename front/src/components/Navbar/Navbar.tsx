@@ -12,7 +12,7 @@ const handleShowLinks = () => {
 
     return (
         <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
-            <img src={Logo} alt='logo' />
+            <a className='logo-link' href='/'><img src={Logo} alt='logo' /></a>
             <ul>
                 <li><a href='/'>A Propos</a></li>
                 <li><a href='/'>Projets</a></li>
