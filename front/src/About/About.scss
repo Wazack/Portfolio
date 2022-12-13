@@ -1,0 +1,30 @@
+.about {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .about-text {
+        margin: 0 3vw;
+        h1 {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 16.2vw;
+            line-height: 0;
+        }
+    }
+    @media screen and (min-width: 425px) {
+        .about-text {
+            margin: 0 6vw;
+            h1 {
+                font-size: 56px;
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-top: unset;
+        .about-text {
+        }
+    }
+}

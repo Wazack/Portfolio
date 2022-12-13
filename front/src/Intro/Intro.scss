@@ -1,145 +1,88 @@
 .welcome {
-    min-height: 100vh;
-    section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 3rem;
-        .presentation {
-            margin-left: 3vw;
-            h1 {
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                font-weight: 400;
-                font-size: 7vw;
-                span {
-                    font-weight: 700;
-                    font-size: 11vw;
-                    text-transform: uppercase;
-                }
-            }
-            .divider {
-                width: 117px;
-                height: 1px;
-                background: #000;
-            }
-            p {
-                font-weight: 400;
-                font-size: 6vw;
-                color: rgba(134, 134, 134, 0.68);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    .presentation {
+        margin-left: 3vw;
+        h1 {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-weight: 400;
+            font-size: 7vw;
+            span {
+                font-weight: 700;
+                font-size: 11vw;
+                text-transform: uppercase;
             }
         }
-        .face {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 395px;
-            img {
-                width: 46vw;
-                max-width: 195.5px;
-                position: absolute;
-                z-index: 1;
-            }
-            svg {
-                position: absolute;
-                width: 86vw;
-                max-width: 365.5px;
-            }
+        .divider {
+            width: 117px;
+            height: 1px;
+            background: #000;
+        }
+        p {
+            font-weight: 400;
+            font-size: 6vw;
+            color: rgba(134, 134, 134, 0.68);
         }
     }
     @media screen and (min-width: 425px) {
-        section {
-            .presentation {
-                margin-left: 6vw;
-                h1 {
-                    font-size: 30px;
-                    span {
-                        font-size: 47px;
-                    }
+        .presentation {
+            margin-left: 6vw;
+            h1 {
+                font-size: 30px;
+                span {
+                    font-size: 47px;
                 }
-                p {
-                    font-size: 26px;
-                }
+            }
+            p {
+                font-size: 26px;
             }
         }
     }
     @media screen and (min-width: 768px) {
-        section {
-            gap: unset;
-            align-items: center;
-            justify-content: space-around;
-            flex-direction: row;
-            .presentation {
-                margin: unset;
-                h1 {
-                    font-size: 25px;
-                    span {
-                        font-size: 42px;
-                    }
-                }
-                p {
-                    font-size: 20px;
+        gap: unset;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        .presentation {
+            margin: unset;
+            h1 {
+                font-size: 25px;
+                span {
+                    font-size: 42px;
                 }
             }
-            .face {
-                width: 302px;
-                img {
-                    max-width: 164px;
-                }
-                svg {
-                    max-width: 302px;
-                }
+            p {
+                font-size: 20px;
             }
         }
     }
     @media screen and (min-width: 1024px) {
-        section {
-            .presentation {
-                h1 {
-                    font-size: 30px;
-                    span {
-                        font-size: 54px;
-                    }
-                }
-                p {
-                    font-size: 22px;
+        .presentation {
+            h1 {
+                font-size: 30px;
+                span {
+                    font-size: 54px;
                 }
             }
-            .face {
-                width: 413px;
-                img {
-                    max-width: 222px;
-                }
-                svg {
-                    max-width: 413px;
-                }
+            p {
+                font-size: 22px;
             }
         }
     }
     @media screen and (min-width: 1440px) {
-        section {
-            .presentation {
-                h1 {
-                    font-size: 36px;
-                    span {
-                        font-size: 64px;
-                    }
-                }
-                p {
-                    font-size: 24px;
+        .presentation {
+            h1 {
+                font-size: 36px;
+                span {
+                    font-size: 64px;
                 }
             }
-            .face {
-                width: 464.58px;
-                img {
-                    max-width: 240px;
-                }
-                svg {
-                    max-width: 464.58px;
-                }
+            p {
+                font-size: 24px;
             }
         }
     }

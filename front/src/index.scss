@@ -13,11 +13,68 @@ code {
     monospace;
 }
 
-.welcome {
-	section {
+section {
+  // min-height: calc(100vh - 80px);
+  .face {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 395px;
+    img {
+        width: 46vw;
+        max-width: 195.5px;
+        position: absolute;
+        z-index: 1;
+    }
+    svg {
+        position: absolute;
+        width: 86vw;
+        max-width: 365.5px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    // min-height: calc(100vh - 90px);
+    .face {
+      width: 302px;
+      img {
+        max-width: 164px;
+      }
+      svg {
+        max-width: 302px;
+      }
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .face {
+      width: 413px;
+      img {
+          max-width: 222px;
+      }
+      svg {
+          max-width: 413px;
+      }
+    }
+  } 
+  @media screen and (min-width: 1440px) {
+    .face {
+      width: 464.58px;
+      img {
+          max-width: 240px;
+      }
+      svg {
+          max-width: 464.58px;
+      }
+    }
+  }
+}
+
+// .welcome {
+	.welcome {
 		height: calc(100vh - 80px);
     @media screen and (min-width: 768px) {
       height: calc(100vh - 90px);
     }
 	}
-}
+// }

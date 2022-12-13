@@ -1,5 +1,15 @@
 .navbar {
     padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    &.nav-bg {
+        background: rgba(255, 251, 251, 0.63);
+        transition: all .3s ease-in;
+    }
+    &.nav-not-bg {
+        transition: all .3s ease-out;
+    }
     .logo-link {
         height: 60px;
     }
