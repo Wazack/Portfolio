@@ -1,0 +1,37 @@
+.projects {
+    margin-top: 3rem;
+    h1 {
+        margin: 0 3vw;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16.2vw;
+        line-height: 1;
+    }
+    .project-img {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 41px;
+        img {
+            width: 73.3vw;
+        }
+    }
+    @media screen and (min-width: 425px) {
+        h1 {
+            margin: 0 6vw;
+            font-size: 56px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        h1 {
+            margin: 0;
+        }
+        .project-img {
+            flex-direction: row;
+            img {
+                width: 400px;
+            }
+        }
+    }
+}
