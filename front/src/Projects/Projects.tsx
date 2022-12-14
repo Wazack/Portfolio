@@ -6,7 +6,7 @@ import './Projects.scss';
 function Projects() {
     return (
         <section className="projects">
-            <div className="projects-presentation">
+            <div className="container">
                 <h1>Projets Recents</h1>
                 <div className="project-img">
                     <img src={weatherApp} alt='Application météo' />

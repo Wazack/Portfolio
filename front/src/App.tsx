@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './About/About';
 import Navbar from './components/Navbar/Navbar';
+import Contact from './Contact/Contact';
 import Intro from './Intro/Intro';
 import Projects from './Projects/Projects';
 
@@ -11,6 +12,7 @@ function App() {
       <Intro />
       <About />
       <Projects />
+      <Contact />
     </div>
   );
 }

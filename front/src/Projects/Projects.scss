@@ -1,4 +1,5 @@
 .projects {
+    min-height: 76vh;
     margin-top: 3rem;
     h1 {
         margin: 0 3vw;
@@ -24,14 +25,28 @@
         }
     }
     @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        .container {
+            width: -webkit-fill-available;
+            max-width: 1655px;
+        }
         h1 {
             margin: 0;
+            margin-left: 2vw;
         }
         .project-img {
             flex-direction: row;
+            justify-content: space-evenly;
             img {
-                width: 400px;
+                width: 44.2vw;
+                max-width: 636.47px;
             }
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        h1 {
+            // margin: 0;
         }
     }
 }
