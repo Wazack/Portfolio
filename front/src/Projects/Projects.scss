@@ -1,6 +1,7 @@
 .projects {
-    min-height: 76vh;
-    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
     h1 {
         margin: 0 3vw;
         text-transform: uppercase;
@@ -27,10 +28,6 @@
     @media screen and (min-width: 768px) {
         display: flex;
         justify-content: center;
-        .container {
-            width: -webkit-fill-available;
-            max-width: 1655px;
-        }
         h1 {
             margin: 0;
             margin-left: 2vw;

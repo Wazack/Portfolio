@@ -5,13 +5,11 @@ import './Projects.scss';
 
 function Projects() {
     return (
-        <section className="projects">
-            <div className="container">
-                <h1>Projets Recents</h1>
-                <div className="project-img">
-                    <img src={weatherApp} alt='Application météo' />
-                    <img src={transcendence} alt='Transcendence' />
-                </div>
+        <section className="projects" id='projects'>
+            <h1>Projets Recents</h1>
+            <div className="project-img">
+                <img src={weatherApp} alt='Application météo' />
+                <img src={transcendence} alt='Transcendence' />
             </div>
         </section>
     )

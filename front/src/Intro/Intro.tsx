@@ -4,7 +4,7 @@ import memoji from '../components/assets/memoji/memoji_laptop.png';
 
 function Intro() {
 	return (
-		<section className="welcome">
+		<section className="welcome" id="welcome">
 			<div className="presentation">
 				<h1>Salut, je me prénomme <span>Thomas Simon</span></h1>
 				<div className="divider"></div>

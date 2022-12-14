@@ -21,11 +21,11 @@ function Navbar() {
 
     return (
         <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"} ${navBg ? "nav-bg" : "nav-not-bg"}`}>
-            <a className='logo-link' href='/'><img src={Logo} alt='logo' /></a>
+            <a className='logo-link' href='#welcome'><img src={Logo} alt='logo' /></a>
             <ul>
-                <li><a href='/'>A Propos</a></li>
-                <li><a href='/'>Projets</a></li>
-                <li><a href='/'>Contact</a></li>
+                <li><a href='#about' aria-current>A Propos</a></li>
+                <li><a href='#projects'>Projets</a></li>
+                <li><a href='#contact'>Contact</a></li>
             </ul>
             <button onClick={handleShowLinks} className='burger'>
                 <span className='burger-bar'></span>

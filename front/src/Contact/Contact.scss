@@ -1,6 +1,9 @@
 .contact {
+    display: flex;
+    justify-content: space-around;
     margin: 0 3vw;
     margin-top: 3rem;
+    margin-bottom: 60px;
     h1 {
         margin: 0;
         margin-bottom: 22px;
@@ -13,6 +16,16 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+        .name-mail {
+            display: flex;
+            gap: 24px;
+            flex-direction: column;
+        }
+        .message-submit {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
         input {
             font-family: 'Poppins', sans-serif;
             font-size: 16px;
@@ -24,11 +37,12 @@
                 outline: none;
             }
             &:first-of-type {
-                // border: 0;
-                width: 198px;
+                width: 53.4vw;
+                max-width: 250px;
             }
             &:last-of-type {
-                width: 302px;
+                width: 75.3vw;
+                max-width: 360px;
             }
             &.err {
                 border: 1px solid red;
@@ -39,12 +53,14 @@
         }
         textarea {
             font-family: 'Poppins', sans-serif;
+            max-width: 491px;
             border: unset;
             font-size: 16px;
             border-radius: 10px;
             padding: 0 19px;
             padding-top: 9px;
-            height: 124px;
+            min-height: 124px;
+            resize: vertical;
             &:focus {
                 outline: none;
             }
@@ -52,5 +68,48 @@
                 color: #CECECE;
             }
         }
+        button {
+            font-family: 'Poppins', sans-serif;
+            border-radius: 10px;
+            width: 98px;
+            height: 32px;
+            font-size: 16px;
+            background: linear-gradient(45deg, #F87537 0%, #FBA81F 100%);
+            border: unset;
+        }
+    }
+    .face {
+        display: none;
+        img {
+            margin-left: 50px;
+        }
+    }
+    @media screen and (min-width: 425px) {
+        margin: 0 6vw;
+        h1 {
+            font-size: 56px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        margin: 0;
+        form {
+            .name-mail {
+                flex-direction: row;
+            }
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        margin-bottom: 60px;
+        form {
+            .name-mail {
+                flex-direction: column;
+            }
+        }
+        .face {
+            display: flex;
+        }
+    }
+    @media screen and (min-width: 1750px) {
+        justify-content: space-evenly;
     }
 }

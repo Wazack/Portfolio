@@ -2,7 +2,7 @@ import './About.scss';
 import memoji from '../components/assets/memoji/memoji_hello.png';
 function About() {
     return (
-        <section className="about">
+        <section className="about" id='about'>
             <div className="about-text">
                 <h1>A Propos</h1>
                 <p>Je suis depuis très jeune pris par la passion du développement web. <br />

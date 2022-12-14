@@ -1,5 +1,6 @@
 import { send } from "emailjs-com";
 import React, { useState } from "react";
+import memoji from '../components/assets/memoji/memoji_contact.png';
 import './Contact.scss';
 
 const initialValue = {
@@ -44,32 +45,49 @@ function Contact() {
     }
 
     return (
-        <section className="contact">
-            <h1>Me Contacter</h1>
-            <form onSubmit={onSubmit}>
-                <input
-                    type='text'
-                    name="name"
-                    placeholder="Nom"
-                    value={toSend.name}
-                    onChange={handleChange}
-                />
-                <input
-                    type='text'
-                    name="mail"
-                    placeholder="E-mail"
-                    value={toSend.mail}
-                    onChange={handleChange}
-                    className={`${mailError ? "err" : "not-err"}`}
-                />
-                <textarea
-                    name="message"
-                    placeholder="Vos besoins."
-                    value={toSend.message}
-                    onChange={handleChange}
-                />
-                <button type="submit">Envoyer</button>
-            </form>
+        <section className="contact" id="contact">
+                <div className="form-title">
+                    <h1>Me Contacter</h1>
+                    <form onSubmit={onSubmit}>
+                        <div className="name-mail">
+                            <input
+                                type='text'
+                                name="name"
+                                placeholder="Nom"
+                                value={toSend.name}
+                                onChange={handleChange}
+                            />
+                            <input
+                                type='text'
+                                name="mail"
+                                placeholder="E-mail"
+                                value={toSend.mail}
+                                onChange={handleChange}
+                                className={`${mailError ? "err" : "not-err"}`}
+                            />
+                        </div>
+                            <textarea
+                                name="message"
+                                placeholder="Vos besoins."
+                                value={toSend.message}
+                                onChange={handleChange}
+                            />
+                            <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+                <div className="face">
+                    <img src={memoji} alt="memoji" />
+                    <svg viewBox="0 0 596 505" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M548.099 30.902C600.684 75.397 605.538 178.949 582.077 272.793C557.807 366.637 505.222 450.773 430.794 485.56C356.366 519.538 259.286 504.167 175.15 462.908C91.014 422.458 19.013 356.12 3.64195 280.074C-11.729 204.028 30.339 118.274 88.587 72.161C146.835 26.048 222.072 21.194 308.635 11.486C396.007 0.968979 495.514 -13.593 548.099 30.902Z" fill="url(#paint0_linear_5_191)"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_5_191" x1="0.450195" y1="504.205" x2="497.212" y2="-82.6773" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F87537"/>
+                        <stop offset="1" stop-color="#FBA81F"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+
+                </div>
         </section>
     )
 }
