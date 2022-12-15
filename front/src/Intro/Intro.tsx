@@ -1,10 +1,13 @@
 import Navbar from "../components/Navbar/Navbar";
 import './Intro.scss';
 import memoji from '../components/assets/memoji/memoji_laptop.png';
+import useNav from "../hooks/useNav";
 
 function Intro() {
+	const introRef = useNav("Intro");
+
 	return (
-		<section className="welcome" id="welcome">
+		<section ref={introRef} className="welcome" id="welcome">
 			<div className="presentation">
 				<h1>Salut, je me prénomme <span>Thomas Simon</span></h1>
 				<div className="divider"></div>

@@ -1,6 +1,7 @@
 import { send } from "emailjs-com";
 import React, { useState } from "react";
 import memoji from '../components/assets/memoji/memoji_contact.png';
+import useNav from "../hooks/useNav";
 import './Contact.scss';
 
 const initialValue = {
@@ -12,6 +13,8 @@ const initialValue = {
 function Contact() {
     const [toSend, setToSend] = useState(initialValue);
     const [mailError, setMailError] = useState(false);
+
+    const contactRef = useNav("Contact");
 
     function isValidEmail(email: string) {
         return /\S+@\S+\.\S+/.test(email);
@@ -45,7 +48,7 @@ function Contact() {
     }
 
     return (
-        <section className="contact" id="contact">
+        <section ref={contactRef} className="contact" id="contact">
                 <div className="form-title">
                     <h1>Me Contacter</h1>
                     <form onSubmit={onSubmit}>
@@ -81,8 +84,8 @@ function Contact() {
                         <path d="M548.099 30.902C600.684 75.397 605.538 178.949 582.077 272.793C557.807 366.637 505.222 450.773 430.794 485.56C356.366 519.538 259.286 504.167 175.15 462.908C91.014 422.458 19.013 356.12 3.64195 280.074C-11.729 204.028 30.339 118.274 88.587 72.161C146.835 26.048 222.072 21.194 308.635 11.486C396.007 0.968979 495.514 -13.593 548.099 30.902Z" fill="url(#paint0_linear_5_191)"/>
                         <defs>
                         <linearGradient id="paint0_linear_5_191" x1="0.450195" y1="504.205" x2="497.212" y2="-82.6773" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#F87537"/>
-                        <stop offset="1" stop-color="#FBA81F"/>
+                        <stop stopColor="#F87537"/>
+                        <stop offset="1" stopColor="#FBA81F"/>
                         </linearGradient>
                         </defs>
                     </svg>
