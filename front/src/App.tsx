@@ -8,7 +8,7 @@ import Projects from './Projects/Projects';
 
 function App() {
   return (
-    <div className="App">
+    <div id='top' className="App">
       <NavProvider>
         <Navbar />
         <div className="pages">

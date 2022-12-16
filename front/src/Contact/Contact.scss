@@ -44,17 +44,18 @@
                 width: 75.3vw;
                 max-width: 360px;
             }
-            &.err {
-                border: 1px solid red;
-            }
             &::placeholder {
                 color: #CECECE;
             }
+        }
+        .err {
+            border: 1px solid red;
         }
         textarea {
             font-family: 'Poppins', sans-serif;
             max-width: 491px;
             border: unset;
+            border: 1px solid white;
             font-size: 16px;
             border-radius: 10px;
             padding: 0 19px;
@@ -68,7 +69,15 @@
                 color: #CECECE;
             }
         }
+        p {
+            line-height: 0;
+            text-align: end;
+            margin: 0;
+            font-size: 14px;
+            color: rgb(99 99 99 / 42%);
+        }
         button {
+            cursor: pointer;
             font-family: 'Poppins', sans-serif;
             border-radius: 10px;
             width: 98px;

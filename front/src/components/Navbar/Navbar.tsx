@@ -8,7 +8,6 @@ function Navbar() {
     const [navBg, setNavBg] = useState(false);
     
     const { activeLinkId } = useContext(NavContext);
-    console.log(activeLinkId);
 
     const handleShowLinks = () => {
         setShowLinks(!showLinks);
@@ -24,7 +23,7 @@ function Navbar() {
 
     return (
         <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"} ${navBg ? "nav-bg" : "nav-not-bg"}`}>
-            <a className='logo-link' href='#welcome'><img src={Logo} alt='logo' /></a>
+            <a className='logo-link' href='#top'><img src={Logo} alt='logo' /></a>
             <ul>
                 <li className={activeLinkId === "About" ? 'active' : ''}><a href='#about'>A Propos</a></li>
                 <li className={activeLinkId === "Projects" ? 'active' : ''}><a href='#projects'>Projets</a></li>

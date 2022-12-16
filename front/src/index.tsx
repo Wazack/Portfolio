@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
+import { SnackbarProvider } from 'notistack';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +10,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <SnackbarProvider autoHideDuration={2000} maxSnack={3} variant='error'>
+      <App />
+    </SnackbarProvider>
   </React.StrictMode>
 );
 

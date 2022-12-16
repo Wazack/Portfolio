@@ -7,7 +7,7 @@ function Intro() {
 	const introRef = useNav("Intro");
 
 	return (
-		<section ref={introRef} className="welcome" id="welcome">
+		<section ref={introRef} className="welcome">
 			<div className="presentation">
 				<h1>Salut, je me prénomme <span>Thomas Simon</span></h1>
 				<div className="divider"></div>
