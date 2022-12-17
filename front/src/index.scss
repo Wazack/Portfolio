@@ -31,6 +31,11 @@ body {
 }
 }
 
+.waves {
+  width: 100%;
+  height: 200px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -52,7 +57,9 @@ code {
         }
       }
       section:not(.welcome) {
-        padding-top: 10rem;
+        @media screen and (min-width: 728px) {
+          padding-top: 10rem;
+        }
       }
     }
   }
@@ -113,11 +120,9 @@ section {
   }
 }
 
-// .welcome {
-	.welcome {
-		height: calc(100vh - 80px);
-    @media screen and (min-width: 768px) {
-      height: calc(100vh - 90px);
-    }
-	}
-// }
+.welcome {
+  min-height: calc(100vh - 80px);
+  @media screen and (min-width: 768px) {
+    min-height: calc(100vh - 90px);
+  }
+}

@@ -9,8 +9,11 @@ function Navbar() {
     
     const { activeLinkId } = useContext(NavContext);
 
-    const handleShowLinks = () => {
-        setShowLinks(!showLinks);
+    const handleShowLinks = (e: any) => {
+        if (e.target.tagName === 'A')
+            setShowLinks(false)
+        else
+            setShowLinks(!showLinks);
     }
 
     const changeNavBg = () => {
@@ -22,12 +25,12 @@ function Navbar() {
     })
 
     return (
-        <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"} ${navBg ? "nav-bg" : "nav-not-bg"}`}>
+        <nav className={`navbar ${showLinks ? "show-nav" : ""} ${navBg ? "nav-bg" : "nav-not-bg"}`}>
             <a className='logo-link' href='#top'><img src={Logo} alt='logo' /></a>
             <ul>
-                <li className={activeLinkId === "About" ? 'active' : ''}><a href='#about'>A Propos</a></li>
-                <li className={activeLinkId === "Projects" ? 'active' : ''}><a href='#projects'>Projets</a></li>
-                <li className={activeLinkId === "Contact" ? 'active' : ''}><a href='#contact'>Contact</a></li>
+                <li onClick={handleShowLinks} className={activeLinkId === "About" ? 'active' : ''}><a href='#about'>A Propos</a></li>
+                <li onClick={handleShowLinks} className={activeLinkId === "Projects" ? 'active' : ''}><a href='#projects'>Projets</a></li>
+                <li onClick={handleShowLinks} className={activeLinkId === "Contact" ? 'active' : ''}><a href='#contact'>Contact</a></li>
             </ul>
             <button onClick={handleShowLinks} className='burger'>
                 <span className='burger-bar'></span>
