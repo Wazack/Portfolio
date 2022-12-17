@@ -81,10 +81,10 @@
                 gap: 3rem;
                 img {
                     &:first-of-type {
-                        max-width: 50vw;
+                        width: 50vw;
                     }
                     &:nth-child(2) {
-                        max-width: 35vw;
+                        width: 35vw;
                     }
                 }
             }

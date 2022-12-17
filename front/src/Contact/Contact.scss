@@ -94,13 +94,13 @@
         }
     }
     @media screen and (min-width: 425px) {
-        margin: 0 6vw;
+        margin-left: 6vw;
+        margin-right: 6vw;
         h1 {
             font-size: 56px;
         }
     }
     @media screen and (min-width: 768px) {
-        margin: 0;
         form {
             .name-mail {
                 flex-direction: row;
@@ -108,7 +108,6 @@
         }
     }
     @media screen and (min-width: 1024px) {
-        margin-bottom: 60px;
         form {
             .name-mail {
                 flex-direction: column;
