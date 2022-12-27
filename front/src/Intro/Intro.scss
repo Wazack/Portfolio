@@ -1,36 +1,54 @@
 .welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
+    display: grid;
+    align-items: center;
+    max-width: 1440px;
     .presentation {
         margin-left: 3vw;
         animation: left-right 1s;
         h1 {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            font-weight: 400;
-            font-size: 7vw;
-            span {
-                font-weight: 700;
-                font-size: 11vw;
-                text-transform: uppercase;
-            }
-        }
-        .divider {
-            width: 117px;
-            height: 1px;
-            background: #000;
+            margin-bottom: 9px;
+            font-weight: 700;
+            line-height: 1;
+            font-size: 11vw;
         }
         p {
-            font-weight: 400;
+            font-weight: 500;
             font-size: 6vw;
+            margin-top: 17px;
+            line-height: 1;
             color: rgba(134, 134, 134, 0.68);
         }
-    }
-    .face {
-        animation: fade-in 1.5s;
+        a.btn {
+            all: unset;
+            cursor: pointer;
+            letter-spacing: 0.1rem;
+            padding: 0.3rem 0.25rem;
+            text-transform: uppercase;
+            background: #B2967D;
+            font-weight: 500;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+            transition: all 0.3s linear;
+            color: azure;
+            &:hover {
+                color: rgb(36, 36, 36);
+                background: #E7D8C9;
+            }
+        }
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            gap: 23px;
+            svg {
+                width: 33px;
+                fill: black;
+                transition: all 0.3s linear;
+                &:hover {
+                    fill: #B2967D;
+                }
+            }
+        }
     }
     .scroll-link {
         display: none;
@@ -58,33 +76,26 @@
         .presentation {
             margin-left: 6vw;
             h1 {
-                font-size: 30px;
-                span {
-                    font-size: 47px;
-                }
+                font-size: 47px;
             }
             p {
                 font-size: 26px;
             }
         }
     }
-    @media screen and (min-width: 768px) {
-        gap: unset;
-        align-items: center;
+    @media screen and (min-width: 1024px) {
+        display: flex;
         justify-content: space-around;
-        flex-direction: row;
+        align-items: center;
         .presentation {
-            margin: unset;
+            margin: 0;
             h1 {
-                font-size: 25px;
-                span {
-                    font-size: 42px;
-                }
+                font-size: 54px;
             }
             p {
-                font-size: 20px;
+                font-size: 22px;
             }
-        }        
+        }
         .circle-1, .circle-2 {
             animation: scroll 2s infinite linear;
             opacity:0;
@@ -117,30 +128,17 @@
             transform: translateX(-50%);
         }
     }
-    @media screen and (min-width: 1024px) {
-        .presentation {
-            h1 {
-                font-size: 30px;
-                span {
-                    font-size: 54px;
-                }
-            }
-            p {
-                font-size: 22px;
-            }
-        }
-    }
     @media screen and (min-width: 1440px) {
         .presentation {
             h1 {
-                font-size: 36px;
-                span {
-                    font-size: 64px;
-                }
+                font-size: 64px;
             }
             p {
                 font-size: 24px;
             }
         }
+    }
+    @media screen and (min-width: 1600px) {
+        justify-content: space-between;
     }
 }

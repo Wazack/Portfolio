@@ -36,7 +36,8 @@
                 display:block;
                 content: '';
                 border-bottom: solid 3px;
-                border-image: linear-gradient(45deg, #F87537 0%, #FBA81F 100%) 1;  
+                color: #E6BEAE;
+                // border-image: linear-gradient(45deg, #F87537 0%, #FBA81F 100%) 1;  
                 transform: scaleX(0);  
                 transition: transform 250ms ease-in-out;
                 transform-origin: 100% 50%;
