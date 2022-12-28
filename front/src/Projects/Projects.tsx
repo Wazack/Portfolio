@@ -12,8 +12,8 @@ function Projects() {
     ]
 
     function Project(props: any) {
-        function hardSkills(skills: any) {
-            const ret = skills.map((skill: any) => <li>{skill}</li>)
+        function hardSkills(skills: string[]) {
+            const ret = skills.map((skill: string) => <li key={skill}>{skill}</li>)
             return (
                 <ul className='hard-skills'>
                     {ret}
