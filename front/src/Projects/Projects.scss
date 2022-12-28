@@ -2,101 +2,70 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    h1 {
-        margin: 0 3vw;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 16.2vw;
-        line-height: 1;
-    }
-    .project-img {
-        margin-top: 40px;
+    max-width: 1440px;
+    .title {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 41px;
-        .weather-app, .transcendence {
-            display: flex;
-            gap: 20px;
-            flex-direction: column;
-        }
-        .weather-app {
-            img {
-                &:first-of-type {
-                    max-width: 497px;
-                }
-                &:last-of-type {
-                    max-width: 611px;
-                }
-            }
-        }
-        .transcendence {
-            img {
-                &:first-of-type {
-                    max-width: 628px;
-                }
-                &:nth-child(2) {
-                    max-width: 412px;
-                }
-                &:last-child {
-                    max-width: 576px;
-                }
-            }
-        }
-        img {
-            filter: drop-shadow(2px 2px 7px rgb(100 100 111));
-            width: 73.3vw;
-        }
+        margin-bottom: 50px;
     }
-    @media screen and (min-width: 425px) {
-        h1 {
-            margin: 0 6vw;
-            font-size: 56px;
-        }
-    }
-    @media screen and (min-width: 768px) {
+    .projects-container {
+        width: 90vw;
+        max-width: 1440px;
+        margin: 0 auto;
         display: flex;
-        justify-content: center;
-        h1 {
-            margin: 0;
-            line-height: 0.3;
-            margin-left: 2vw;
-        }
-        .project-img {
-            flex-direction: row;
-            gap: 0;
-            margin-left: 2vw;
-            margin-right: 2vw;
-            justify-content: space-between;
-            align-items: center;
-            .weather-app {
-                gap: 5rem;
-                img {
-                    &:first-of-type {
-                        width: 33vw;
-                    }
-                }
-            }
-            .transcendence {
-                align-items: flex-end;
-                gap: 3rem;
-                img {
-                    &:first-of-type {
-                        width: 50vw;
-                    }
-                    &:nth-child(2) {
-                        width: 35vw;
-                    }
-                }
-            }
+        flex-direction: column;
+        gap: 4rem;
+        article {
+            display: flex;
+            flex-direction: column;
             img {
-                width: 44.2vw;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                width: 100%;
+            }
+            .description {
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                background: #FFFF;
+                padding: 1rem 2rem;
+                span {
+                    color: #B2967D;
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                }
+                h3 {
+                    font-weight: 500;
+                    line-height: 0;
+                    letter-spacing: .1rem;
+                    text-transform: uppercase;
+                }
+                p {
+                    margin-top: 40px;
+                }
+                .links {
+                    margin-top: 2rem;
+                    a {
+                        cursor: pointer;
+                        svg {
+                            width: 33px;
+                            fill: #B2967D;
+                            transition: all 0.3s linear;
+                            &:hover {
+                                fill: #86715e;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
-    @media screen and (min-width: 1440px) {
-        h1 {
-            // margin: 0;
+    @media screen and (min-width: 1024px) {
+        margin: 0 auto;
+        .projects-container {
+            flex-direction: row;
+            justify-content: space-around;
+            article {
+                width: 100%;
+            }
         }
     }
 }

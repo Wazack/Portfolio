@@ -51,6 +51,33 @@ section {
   &:nth-child(2n) {
     background: #F5FEFE;
   }
+  h2 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 0;
+  }
+  p {
+    line-height: 2;
+    color: #424242;
+    letter-spacing: 1px;
+  }
+  ul.hard-skills {
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    list-style: none;
+    gap: .4rem .6rem;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0;
+    li {
+        margin: 0;
+        padding: .25rem .2rem;
+        color: azure;
+        background: #E6BEAE;
+        border: 2px solid transparent;
+        border-radius: 5px;
+    }
+  }
   .container-undraw {
     display: flex;
     justify-content: center;
@@ -58,6 +85,11 @@ section {
       width: 86vw;
       max-width: 448.92px;
       text-align: center;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    h2 {
+      font-size: 40px;
     }
   }
   @media screen and (min-width: 1024px) {

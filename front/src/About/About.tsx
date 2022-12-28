@@ -1,5 +1,4 @@
 import './About.scss';
-import memoji from '../components/assets/memoji/memoji_hello.png';
 import useNav from '../hooks/useNav';
 function About() {
     const aboutRef = useNav("About");
@@ -7,7 +6,7 @@ function About() {
         <section ref={aboutRef} className="about" id='about'>
             <div className="container-about">
                 <div className="about-text">
-                    <h1>A Propos</h1>
+                    <h2>A Propos</h2>
                     <div className="divider"></div>
                     <p>Je suis depuis très jeune pris par la passion du développement web. <br />
                         En 2020 je rejoins l’Ecole 42 dans laquelle j’ai effectué deux années très enrichissantes où j’ai pu me développer sur un plan personnel comme profesionnel et acquérir des compétences qui me servent maintenant dans mon métier de développeur frontend.</p>
