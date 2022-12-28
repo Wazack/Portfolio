@@ -1,122 +1,105 @@
 .contact {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 3vw;
-    margin-top: 3rem;
-    h1 {
-        margin: 0;
-        margin-bottom: 22px;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 14.2vw;
-        line-height: 1;
-    }
-    form {
+    .container-contact {
+        max-width: 1440px;
         display: flex;
-        flex-direction: column;
-        gap: 24px;
-        .name-mail {
+        justify-content: space-around;
+        form {
             display: flex;
-            gap: 24px;
-            flex-direction: column;
-        }
-        .message-submit {
-            display: flex;
+            align-items: flex-start;
             flex-direction: column;
             gap: 24px;
-        }
-        input {
-            font-family: 'Poppins', sans-serif;
-            font-size: 16px;
-            border-radius: 10px;
-            height: 38px;
-            padding: 0 19px;
-            border: 1px solid white;
-            &:focus {
-                outline: none;
-            }
-            &:first-of-type {
-                width: 53.4vw;
-                max-width: 250px;
-            }
-            &:last-of-type {
-                width: 75.3vw;
-                max-width: 360px;
-            }
-            &::placeholder {
-                color: #CECECE;
-            }
-        }
-        .err {
-            border: 1px solid red;
-        }
-        textarea {
-            font-family: 'Poppins', sans-serif;
-            max-width: 491px;
-            border: unset;
-            border: 1px solid white;
-            font-size: 16px;
-            border-radius: 10px;
-            padding: 0 19px;
-            padding-top: 9px;
-            min-height: 124px;
-            resize: vertical;
-            &:focus {
-                outline: none;
-            }
-            &::placeholder {
-                color: #CECECE;
-            }
-        }
-        p {
-            line-height: 0;
-            text-align: end;
-            margin: 0;
-            font-size: 14px;
-            color: rgb(99 99 99 / 42%);
-        }
-        button {
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            border-radius: 10px;
-            width: 98px;
-            height: 32px;
-            font-size: 16px;
-            background: linear-gradient(45deg, #F87537 0%, #FBA81F 100%);
-            border: unset;
-        }
-    }
-    .face {
-        display: none;
-        img {
-            margin-left: 50px;
-        }
-    }
-    @media screen and (min-width: 425px) {
-        margin-left: 6vw;
-        margin-right: 6vw;
-        h1 {
-            font-size: 56px;
-        }
-    }
-    @media screen and (min-width: 768px) {
-        form {
             .name-mail {
-                flex-direction: row;
-            }
-        }
-    }
-    @media screen and (min-width: 1024px) {
-        form {
-            .name-mail {
+                display: flex;
+                gap: 24px;
                 flex-direction: column;
             }
+            .message-submit {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+            input {
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                font-family: 'Poppins', sans-serif;
+                font-size: 16px;
+                border-radius: 10px;
+                height: 38px;
+                padding: 0 19px;
+                border: 1px solid white;
+                &:focus {
+                    outline: none;
+                }
+                &:first-of-type {
+                    width: 53.4vw;
+                    max-width: 250px;
+                }
+                &:last-of-type {
+                    width: 75.3vw;
+                    max-width: 360px;
+                }
+                &::placeholder {
+                    color: #CECECE;
+                }
+            }
+            .err {
+                border: 1px solid red;
+            }
+            textarea {
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                font-family: 'Poppins', sans-serif;
+                width: -webkit-fill-available;
+                border: unset;
+                border: 1px solid white;
+                font-size: 16px;
+                border-radius: 10px;
+                padding: 0 19px;
+                padding-top: 9px;
+                min-height: 124px;
+                resize: vertical;
+                &:focus {
+                    outline: none;
+                }
+                &::placeholder {
+                    color: #CECECE;
+                }
+            }
+            p {
+                line-height: 0;
+                width: -webkit-fill-available;
+                text-align: end;
+                margin: 0;
+                font-size: 14px;
+                color: rgb(99 99 99 / 42%);
+            }
         }
-        .face {
-            display: flex;
+        .container-undraw {
+            display: none;
         }
-    }
-    @media screen and (min-width: 1750px) {
-        justify-content: space-evenly;
+        @media screen and (min-width: 425px) {
+            margin-left: 6vw;
+            margin-right: 6vw;
+        }
+        @media screen and (min-width: 768px) {
+            form {
+                .name-mail {
+                    flex-direction: row;
+                }
+            }
+        }
+        @media screen and (min-width: 1024px) {
+            margin: 0 auto;
+            align-items: center;
+            form {
+                .name-mail {
+                    flex-direction: column;
+                }
+            }
+            .container-undraw {
+                display: flex;
+            }
+        }
+        @media screen and (min-width: 1600px) {
+            justify-content: space-between;
+        }
     }
 }

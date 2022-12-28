@@ -18,37 +18,6 @@
             line-height: 1;
             color: rgba(134, 134, 134, 0.68);
         }
-        a.btn {
-            all: unset;
-            cursor: pointer;
-            letter-spacing: 0.1rem;
-            padding: 0.3rem 0.25rem;
-            text-transform: uppercase;
-            background: #B2967D;
-            font-weight: 500;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
-            transition: all 0.3s linear;
-            color: azure;
-            &:hover {
-                color: rgb(36, 36, 36);
-                background: #E7D8C9;
-            }
-        }
-        .social-links {
-            margin-top: 25px;
-            display: flex;
-            gap: 23px;
-            svg {
-                width: 33px;
-                fill: black;
-                transition: all 0.3s linear;
-                &:hover {
-                    fill: #B2967D;
-                }
-            }
-        }
     }
     .scroll-link {
         display: none;

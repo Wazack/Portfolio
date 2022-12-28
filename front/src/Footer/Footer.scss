@@ -1,0 +1,28 @@
+footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    width: -webkit-fill-available;
+    background: black;
+    .social-links {
+        svg {
+            fill: azure;
+        }
+    }
+    h4 {
+        text-align: center;
+        margin-top: 0.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1rem;
+        letter-spacing: .1rem;
+        span {
+            letter-spacing: 0;
+            color: #B2967D;
+        }
+    }
+}

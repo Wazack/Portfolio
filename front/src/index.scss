@@ -19,6 +19,7 @@ body {
 }
 
 .waves {
+  background: #F5FEFE;
   width: 100%;
   height: 200px;
 }
@@ -26,6 +27,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.social-links {
+  margin-top: 25px;
+  display: flex;
+  gap: 23px;
+  svg {
+      width: 33px;
+      fill: black;
+      transition: all 0.3s linear;
+      &:hover {
+          fill: #B2967D;
+      }
+  }
 }
 
 .App {
@@ -56,10 +71,34 @@ section {
     font-size: 35px;
     line-height: 0;
   }
+  .btn {
+    all: unset;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    padding: 0.3rem 0.25rem;
+    text-transform: uppercase;
+    background: #B2967D;
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+    transition: all 0.3s linear;
+    color: azure;
+    &:hover {
+        color: rgb(36, 36, 36);
+        background: #E7D8C9;
+    }
+  }
   p {
     line-height: 2;
     color: #424242;
     letter-spacing: 1px;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
   }
   ul.hard-skills {
     text-transform: uppercase;
