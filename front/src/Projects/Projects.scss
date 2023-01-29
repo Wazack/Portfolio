@@ -38,7 +38,10 @@
                 }
                 .links {
                     margin-top: 2rem;
+                    display: flex;
+                    gap: 3px;
                     a {
+                        all: unset;
                         cursor: pointer;
                         svg {
                             width: 33px;
@@ -48,6 +51,14 @@
                                 fill: #86715e;
                             }
                         }
+                        // .project-link {
+                        //     transition: all 0.3s linear;
+                        //     width: 33px;
+                        //     color: #B2967D;
+                        //     &:hover {
+                        //         color: #86715e;
+                        //     }
+                        // }
                     }
                 }
             }

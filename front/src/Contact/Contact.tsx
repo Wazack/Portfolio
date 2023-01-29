@@ -16,24 +16,25 @@ function Contact() {
     const [nameError, setNameError] = useState('');
     const [mailError, setMailError] = useState('');
     const [messageError, setMessageError] = useState('');
-    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
+    const { enqueueSnackbar} = useSnackbar();
 
     const contactRef = useNav("Contact");
 
     function isValidEmail(email: string) {
+        // eslint-disable-next-line
         return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
     }
 
     const handleChange = (e: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        if (e.currentTarget.name == 'mail') {
+        if (e.currentTarget.name === 'mail') {
             if (isValidEmail(e.currentTarget.value))
                 setMailError('');
         }
-        else if (e.currentTarget.name == 'name') {
+        else if (e.currentTarget.name === 'name') {
             if (e.currentTarget.value.length >= 3)
                 setNameError('');
         }
-        else if (e.currentTarget.name == 'message') {
+        else if (e.currentTarget.name === 'message') {
             if (e.currentTarget.value.length >= 50)
                 setMessageError('');
         }

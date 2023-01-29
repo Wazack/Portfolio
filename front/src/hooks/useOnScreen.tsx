@@ -1,4 +1,4 @@
-import React, { useState, MutableRefObject, useEffect } from "react";
+import { useState, MutableRefObject, useEffect } from "react";
 
 function useOnScreen(ref: MutableRefObject<any>) {
     const [isOnScreen, setIsOnScreen] = useState(false);
